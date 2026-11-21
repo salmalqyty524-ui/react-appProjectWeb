@@ -1,0 +1,468 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Tahoma, sans-serif;
+  direction: rtl;
+  background: #fff;
+  color: #333;
+}
+
+.app {
+  width: 100%;
+  overflow: hidden;
+}
+
+
+
+.navbar {
+  width: 100%;
+  height: 75px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #eae3e3;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #7b2cbf;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #444;
+  font-size: 16px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #7b2cbf;
+}
+
+
+
+.hero {
+  height: 650px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(45, 15, 65, 0.45);
+}
+
+.hero-overlay {
+  position: absolute;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.hero-overlay p {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.hero-overlay h1 {
+  color: #ffffff;
+  font-size: 52px;
+  margin-bottom: 15px;
+}
+
+.hero-overlay span {
+  font-size: 21px;
+  display: block;
+  margin-bottom: 30px;
+}
+
+.hero-button,
+.whatsapp-button,
+.map-button {
+  display: inline-block;
+  padding: 14px 30px;
+  background: #8e44ad;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.hero-button:hover,
+.map-button:hover {
+  background: #6c3483;
+  transform: translateY(-3px);
+}
+
+
+
+.section {
+  padding: 90px 7%;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title span {
+  color: #9b59b6;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.section-title h2 {
+  color: #4a235a;
+  font-size: 36px;
+  margin-top: 8px;
+}
+
+
+
+.about {
+  text-align: center;
+  background: #faf7fc;
+}
+
+.about > p {
+  max-width: 850px;
+  margin: auto;
+  font-size: 19px;
+  line-height: 2;
+}
+
+.about strong {
+  color: #7b2cbf;
+}
+
+
+
+.products {
+  background: #fff;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1150px;
+  margin: auto;
+}
+
+.product-card {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+}
+
+.product-image-box {
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+}
+
+.product-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s;
+}
+
+.product-card:hover img {
+  transform: scale(1.06);
+}
+
+.product-info {
+  padding: 25px;
+  text-align: center;
+}
+
+.product-info h3 {
+  color: #6c3483;
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.product-info p {
+  color: #666;
+  line-height: 1.8;
+}
+
+
+
+.companies {
+  background: #faf7fc;
+  text-align: center;
+}
+
+.companies-text {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 35px;
+}
+
+.companies-grid {
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.company-card {
+  height: 180px;
+  background: white;
+  border-radius: 18px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.company-card:hover {
+  transform: translateY(-5px);
+}
+
+.company-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+
+.location {
+  background: #fff;
+}
+
+.location-content {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 35px;
+  align-items: center;
+}
+
+.location-info {
+  text-align: center;
+  padding: 35px;
+  background: #faf7fc;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.location-info h3 {
+  color: #6c3483;
+  font-size: 27px;
+  margin-bottom: 20px;
+}
+
+.location-info p {
+  color: #555;
+  font-size: 18px;
+  margin: 15px 0;
+}
+
+.map-button {
+  margin-top: 20px;
+}
+
+.map-box {
+  width: 100%;
+  height: 380px;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.12);
+}
+
+.map-box iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+
+
+.contact {
+  text-align: center;
+  background: #faf7fc;
+}
+
+.contact > p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.whatsapp-button {
+  background: #25d366;
+}
+
+.whatsapp-button:hover {
+  background: #1da851;
+}
+
+
+
+footer {
+  text-align: center;
+  padding: 45px 20px;
+  background: #35113f;
+  color: white;
+}
+
+footer h3 {
+  font-size: 25px;
+  margin-bottom: 12px;
+}
+
+footer p {
+  margin-bottom: 10px;
+}
+
+.developer-info {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.developer-info p {
+  margin: 7px 0;
+  font-size: 16px;
+}
+
+.copyright {
+  margin-top: 20px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+
+
+@media (max-width: 900px) {
+  .navbar {
+    height: auto;
+    padding: 20px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero {
+    height: 550px;
+  }
+
+  .hero-overlay h1 {
+    font-size: 38px;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+   }
+
+  .companies-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .location-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-links {
+    gap: 10px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+
+  .hero {
+    height: 480px;
+  }
+
+  .hero-overlay h1 {
+    font-size: 30px;
+  }
+
+  .hero-overlay p {
+    font-size: 18px;
+  }
+
+  .hero-overlay span {
+    font-size: 17px;
+  }
+
+  .section {
+    padding: 60px 5%;
+  }
+
+  .section-title h2 {
+    font-size: 28px;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .companies-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .location-content {
+    grid-template-columns: 1fr;
+  }
+
+  .map-box {
+    height: 300px;
+  }
+}
